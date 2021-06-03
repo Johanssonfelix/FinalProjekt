@@ -16,7 +16,7 @@ public class LoanManager extends Book {
             thebook.executeUpdate();
         }
         catch (SQLException ex){
-            System.out.println("Something went wrong " + ex.getMessage());
+            System.out.println();
         }
     }
     public void addBook(int isbn, String namn, String forfattare){
