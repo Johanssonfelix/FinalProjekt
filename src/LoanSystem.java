@@ -4,26 +4,32 @@ import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
 public class LoanSystem extends LoanManager {
-    public static void main(String[] args) throws InterruptedException {
+    private static Logger logger = LogManager.getLogger(LoanSystem.class.getName());
 
-        Logger logger = LogManager.getLogger(LoanSystem.class.getName());
+    public static void main(String[] args) {
+
         Scanner input = new Scanner(System.in);
 
-        while(true){
-            Thread.sleep(1000);
-            logger.trace("tttttttt");
-            logger.debug("dddddddd");
-            logger.error("eeeeeeee");
-            logger.info("iiiiiiiii");
-            logger.warn("wwwwwwwww");
-            logger.fatal("fffffffff");
-        }
+        logger.info("Starting");
+        int a, b;
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("print a and b");
+        a = in.nextInt();
+        b = in.nextInt();
+        in.close();
+        logger.debug(String.format("a=%d", "b=%d" ));
+       if (a < b){
+           System.out.println(b);
+       }else {
+           System.out.println(a);
+       }
+        logger.info("Ended");
+
         /*
         int option = 0;
         boolean avsluta = false;
         LoanManager lm = new LoanManager();
-
-
 
         while (!avsluta) {
             System.out.println("Biblioteksmeny\n=======");
