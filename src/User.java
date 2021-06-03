@@ -42,14 +42,14 @@ private String password;
             System.out.println("Usertype must have an int from 0-3");
         }
         if (userType == 0){
-            User student = new Student();
+            User student = new User();
         } else if (userType == 1){
-            User phD = new PhD();
+            User phD = new User();
         } else if (userType == 2){
-            User master = new Master();
+            User master = new User();
         } else {
             if (userType == 3){
-                User teacher = new Teacher();
+                User teacher = new User();
             }
         }
 
