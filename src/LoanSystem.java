@@ -1,14 +1,29 @@
 import java.sql.*;
 import java.util.Scanner;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public class LoanSystem extends LoanManager {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
-
+        Logger logger = LogManager.getLogger(LoanSystem.class.getName());
         Scanner input = new Scanner(System.in);
+
+        while(true){
+            Thread.sleep(1000);
+            logger.trace("tttttttt");
+            logger.debug("dddddddd");
+            logger.error("eeeeeeee");
+            logger.info("iiiiiiiii");
+            logger.warn("wwwwwwwww");
+            logger.fatal("fffffffff");
+        }
+        /*
         int option = 0;
         boolean avsluta = false;
         LoanManager lm = new LoanManager();
+
+
 
         while (!avsluta) {
             System.out.println("Biblioteksmeny\n=======");
@@ -89,5 +104,7 @@ public class LoanSystem extends LoanManager {
 
 
         }
+
+         */
     }
 }
